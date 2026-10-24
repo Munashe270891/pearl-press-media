@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Print Quote Calculator | Pearl Press Media</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Pearl Press Media</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="services.html">Services</a>
+            <a href="calculator.html" class="active">Quote Calculator</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="calculator-card">
+            <h2>Instant Book Printing Estimator</h2>
+            <p>Get an instant estimation for your custom publishing or book printing project.</p>
+
+            <form id="quoteForm">
+                <div class="form-group">
+                    <label for="pages">Total Page Count:</label>
+                    <input type="number" id="pages" min="10" max="1000" value="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="copies">Number of Copies:</label>
+                    <input type="number" id="copies" min="1" max="10000" value="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Trim Size:</label>
+                    <select id="size">
+                        <option value="A5">A5 (Standard Regional Size)</option>
+                        <option value="6x9">6" x 9" (Trade Paperback Standard)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="finish">Cover Finishing:</label>
+                    <select id="finish">
+                        <option value="gloss">Gloss Lamination</option>
+                        <option value="matte">Matte Lamination</option>
+                        <option value="uv">UV Spot Finish</option>
+                    </select>
+                </div>
+
+                <div class="result-box">
+                    <h3>Estimated Total: <span id="totalCost">$0.00</span></h3>
+                    <p>Estimated Cost Per Unit: <span id="unitCost">$0.00</span></p>
+                    <small>*Final quotation may vary depending on exact paper stock weight and manuscript formatting state.</small>
+                </div>
+
+                <button type="button" onclick="calculateQuote()" class="btn-primary">Calculate Estimate</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
